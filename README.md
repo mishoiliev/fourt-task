@@ -44,3 +44,15 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Imrpovements that can be made with more time
+
+First of all, the openweathermap seems to be in some way faulty, since it doesn't have cors enabled and even after working around that it still would throw 403 at some occasions. This is why I am using the json file, downloaded from the browser. This is the most important thing to be figured out and fixed. Otherwise - project architecture could be better, obvoiusly styling and UI/UX can be much improved. City selector can be added based on the selected country instead of having only one country selector. Weather information can probably be displayed better and in more depth.
+
+Didn't have time to create any sort of testing for the application - this is also something that should be done with more time.
+
+Some more though can be put into how to manipulate the data from openweathermap to be displayed in the best way possible. I decided that gropuing everythin by day and then expanding results for different hours of the day is probably most intuitive. Nevertheless it can be done in some sort of slider that flows through the hours and days respectively. 
+
+There are some places that type ```any``` is being used, which is always not a good practice. Couldn't find a typing that openweathermap provides, so decided that it would be a waste of time to write out the whole structure of the data. With more time, that should probably be done. 
+
+There probably will be some optimisations to be made - for example minimising the rerenders. I have tried to do that anyways, but feels like it can be better (probably by using persistent state for caching state)
